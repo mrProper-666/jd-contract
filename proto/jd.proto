@@ -1,0 +1,31 @@
+syntax = "proto3";
+option go_package = "portveinsoft.jd.v1;jdv1";
+import "google/protobuf/timestamp.proto";
+
+service Jd {
+  rpc Check (CheckRequest) returns (CheckResponse);
+}
+
+message CheckRequest {
+  repeated string product = 1;
+  string fromVersion = 2;
+  string arch = 3;
+}
+
+message CheckResponse {
+  repeated Product products = 1;
+}
+
+message Product {
+  string name = 1;
+  string version = 2;
+  string description = 3;
+  google.protobuf.Timestamp released = 4;
+  repeated Arch arches = 5;
+}
+
+message Arch {
+  string name = 1;
+  string url = 2;
+  int64 size = 3;
+}
