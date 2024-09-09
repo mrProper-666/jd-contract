@@ -9,7 +9,7 @@ service Jd {
 message CheckRequest {
   repeated string product = 1;
   string fromVersion = 2;
-  string arch = 3;
+  repeated string arch = 3;
 }
 
 message CheckResponse {
