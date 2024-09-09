@@ -1,4 +1,4 @@
-module jd-contract
+module github.com/mrProper-666/jd-contract
 
 go 1.23.1
 
