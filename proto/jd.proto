@@ -21,11 +21,16 @@ message Product {
   string version = 2;
   string description = 3;
   google.protobuf.Timestamp released = 4;
-  repeated Arch arches = 5;
+  repeated Version versions = 5;
 }
 
 message Arch {
   string name = 1;
   string url = 2;
   int64 size = 3;
+}
+
+message Version {
+  string version = 1;
+  repeated Arch arches = 5;
 }
