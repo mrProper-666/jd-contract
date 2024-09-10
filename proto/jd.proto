@@ -18,10 +18,9 @@ message CheckResponse {
 
 message Product {
   string name = 1;
-  string version = 2;
-  string description = 3;
-  google.protobuf.Timestamp released = 4;
-  repeated Version versions = 5;
+  string description = 2;
+  google.protobuf.Timestamp released = 3;
+  repeated Version versions = 4;
 }
 
 message Arch {
